@@ -1,0 +1,130 @@
+{
+    "login": {
+        "register_button": "Register",
+        "user_login_title": "User Login",
+        "admin_login_title": "Admin Login",
+        "username_label": "Username",
+        "username_placeholder": "Enter your username",
+        "user_username_placeholder": "Enter your username",
+        "admin_username_placeholder": "Enter admin username",
+        "password_label": "Password",
+        "password_placeholder": "Enter your password",
+        "user_password_placeholder": "Enter your password",
+        "admin_password_placeholder": "Enter admin password",
+        "switch_admin_login": "Switch to Admin Login",
+        "switch_user_login": "Switch to User Login",
+        "login_button": "Login",
+        "or_login_with": "Or login with:",
+        "google_button": "Google",
+        "github_button": "GitHub",
+        "admin_button": "Admin"
+    },
+
+    "dashboard": {
+        "title": "Welcome to Your Dashboard!",
+        "card1": {
+            "title": "User Management",
+            "description": "Manage all user accounts and permissions.",
+            "button": "Go to Users"
+        },
+        "card2": {
+            "title": "Analytics Overview",
+            "description": "View your key performance indicators and reports.",
+            "button": "View Analytics"
+        },
+        "card3": {
+            "title": "Settings & Configuration",
+            "description": "Adjust application settings and preferences.",
+            "button": "Open Settings"
+        }
+    },
+
+    "adminRegisterBox": {
+        "title": "Admin Registration",
+        "description": "Please enter your Admin ID, Email, and Password to register.",
+        "adminIdLabel": "Admin ID",
+        "adminIdPlaceholder": "Enter your Admin ID",
+        "adminEmailLabel": "Admin Email",
+        "adminEmailPlaceholder": "Enter your Admin Email",
+        "registerButton": "Register as Admin",
+        "adminIdHelpMessage": "Enter the Admin ID you requested from the rout web manager.",
+        "ownerIdDetected": "The entered Admin ID is an Owner ID.",
+        "invalidAdminId": "Invalid Admin ID. Please check again."
+    },
+
+    
+    
+    "registerBox": {
+        "createAccount": "Create New Account",
+        "fillDetails": "Please fill in the details below to proceed.",
+        "initialQuestion": "Do you want to register?",
+        "no": "No",
+        "yes": "Yes",
+        "username": "Username",
+        "enterUsername": "Enter your username",
+        "send": "Send",
+        "emailAddress": "Email Address",
+        "emailPlaceholder": "example@gmail.com",
+        "password": "Password",
+        "enterPassword": "Enter your password",
+        "confirmPassword": "Confirm Password",
+        "repeatPassword": "Repeat password",
+        "registrationSuccess": "Account creation successful! Welcome.",
+        "registrationCancelled": "Registration cancelled.",
+        "welcomeMessage": "Hello! Welcome. I will guide you through the registration process.",
+        "askUsername": "Okay, let's start. What is your username?",
+        "cancelledMessage": "Okay, registration cancelled. See you!",
+        "emptyInput": "Input cannot be empty!",
+        "invalidEmail": "Invalid email format. Please enter a valid email address.",
+        "askEmail": "Hello {username}! What is your email address?",
+        "askPassword": "Thank you. Now, create your password.",
+        "confirmPasswordPrompt": "Okay. Please confirm your password.",
+        "passwordMismatch": "Password and confirm password do not match. Please re-enter your password confirmation.",
+        "processingRegistration": "Great! Your registration is being processed...",
+        "reviewDetails": "Great! Please review your details before confirming.",
+        "confirmPasswordSuccess": "Password confirmation successful.",
+        "passwordCreatedSuccess": "Password created successfully.",
+        "allDataFilled": "All data has been filled.",
+        "proceedToConfirmation": "Will proceed to data confirmation.",
+        "creatingUserId": "Creating user ID, please wait...",
+        "registeringUser": "Registering new user:",
+        "registrationSuccessWithName": "Registration for {username} successful!",
+        "alreadyHaveAccount": "Already have an account?",
+        "loginHere": "Login here",
+        "usernameExists": "This username is already taken. Please try another.",
+        "emailExists": "This email is already registered. Please use another email."
+    },
+    "registrationSummary": {
+      "title": "Confirm Your Data",
+      "description": "Please make sure your details are correct before proceeding.",
+      "username": "Username",
+      "email": "Email Address",
+      "userId": "User ID",
+      "cancel": "Cancel",
+      "confirm": "Submit Registration"
+    },
+    "passwordValidator": {
+        "minLength": "At least 6 characters"
+    },
+    "adminCreateCredentialsBox": {
+        "title": "Create Admin Credentials",
+        "description": "Please create a username and password for the new admin account.",
+        "usernameLabel": "Username",
+        "usernamePlaceholder": "Enter username",
+        "passwordLabel": "Password",
+        "passwordPlaceholder": "Enter password",
+        "confirmPasswordLabel": "Confirm Password",
+        "confirmPasswordPlaceholder": "Confirm password",
+        "createButton": "Create Credentials",
+        "adminCreatedSuccess": "Admin created successfully.",
+        "passwordMismatch": "Password and confirm password do not match.",
+        "passwordInvalid": "Password does not meet validation criteria.",
+        "successMessage": "Admin credentials created successfully!",
+        "auth/email-already-in-use": "This email is already registered. Use another email.",
+        "auth/invalid-email": "Invalid email format.",
+        "auth/weak-password": "Password is too weak."
+    },
+    "validation": {
+        "adminIdFormat": "Admin ID must start with 'f3' followed by characters (letters/numbers) and end with 'r'."
+    }
+}

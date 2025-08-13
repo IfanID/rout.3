@@ -1,0 +1,131 @@
+{
+  "login": {
+    "register_button": "Daftar",
+    "user_login_title": "Login Pengguna",
+    "admin_login_title": "Login Admin",
+    "username_label": "Nama Pengguna",
+    "username_placeholder": "Masukkan nama pengguna Anda",
+    "user_username_placeholder": "Masukkan nama pengguna Anda",
+    "admin_username_placeholder": "Masukkan nama pengguna admin",
+    "password_label": "Kata Sandi",
+    "password_placeholder": "Masukkan kata sandi Anda",
+    "user_password_placeholder": "Masukkan kata sandi Anda",
+    "admin_password_placeholder": "Masukkan kata sandi admin",
+    "switch_admin_login": "Beralih ke Login Admin",
+    "switch_user_login": "Beralih ke Login Pengguna",
+    "login_button": "Masuk",
+    "or_login_with": "Atau masuk dengan:",
+    "google_button": "Google",
+    "github_button": "GitHub",
+    "admin_button": "Admin"
+  },
+  
+  "dashboard": {
+    "title": "Selamat Datang di Dashboard Anda!",
+    "card1": {
+      "title": "Manajemen Pengguna",
+      "description": "Kelola semua akun pengguna dan izin.",
+      "button": "Pergi ke Pengguna"
+    },
+    "card2": {
+      "title": "Ikhtisar Analitik",
+      "description": "Lihat indikator kinerja utama dan laporan Anda.",
+      "button": "Lihat Analitik"
+    },
+    "card3": {
+      "title": "Pengaturan & Konfigurasi",
+      "description": "Sesuaikan pengaturan dan preferensi aplikasi.",
+      "button": "Buka Pengaturan"
+    }
+  },
+
+  "adminRegisterBox": {
+    "title": "Pendaftaran Admin",
+    "description": "Silakan masukkan ID Admin, Email, dan Kata Sandi Anda untuk mendaftar.",
+    "adminIdLabel": "ID Admin",
+    "adminIdPlaceholder": "Masukkan ID Admin Anda",
+    "adminEmailLabel": "Email Admin",
+    "adminEmailPlaceholder": "Masukkan Email Admin Anda",
+    "registerButton": "Daftar sebagai Admin",
+    "adminIdHelpMessage": "Isi dengan ID Admin yang kamu minta dari pengelola web rout.",
+    "ownerIdDetected": "ID Admin yang dimasukkan adalah ID Owner.",
+    "invalidAdminId": "ID Admin tidak valid. Mohon periksa kembali."
+  },
+  
+  
+  
+  "registerBox": {
+    "createAccount": "Buat Akun Baru",
+    "fillDetails": "Silakan isi detail di bawah ini untuk melanjutkan.",
+    "initialQuestion": "Apakah kamu mau mendaftar?",
+    "no": "Tidak",
+    "yes": "Ya",
+    "username": "Nama Pengguna",
+    "enterUsername": "Masukkan nama pengguna Anda",
+    "send": "Kirim",
+    "emailAddress": "Alamat Email",
+    "emailPlaceholder": "example@gmail.com",
+    "password": "Kata Sandi",
+    "enterPassword": "Masukkan kata sandi",
+    "confirmPassword": "Konfirmasi Kata Sandi",
+    "repeatPassword": "Ulangi kata sandi",
+    "registrationSuccess": "Pembuatan akun berhasil! Selamat datang.",
+    "registrationCancelled": "Pendaftaran dibatalkan.",
+    "welcomeMessage": "Halo! Selamat datang. Saya akan memandu Anda melalui proses pendaftaran.",
+    "askUsername": "Baik, mari kita mulai. Siapa nama pengguna Anda?",
+    "cancelledMessage": "Baik, pendaftaran dibatalkan. Sampai jumpa!",
+    "emptyInput": "Input tidak boleh kosong!",
+    "invalidEmail": "Format email tidak valid. Mohon masukkan alamat email yang benar.",
+    "askEmail": "Halo {username}! Apa alamat email Anda?",
+    "askPassword": "Terima kasih. Sekarang, buat kata sandi Anda.",
+    "confirmPasswordPrompt": "Baik. Mohon konfirmasi kata sandi Anda.",
+    "passwordMismatch": "Kata sandi dan konfirmasi kata sandi tidak cocok. Mohon ulangi konfirmasi kata sandi Anda.",
+    "processingRegistration": "Hebat! Pendaftaran Anda sedang diproses...",
+    "reviewDetails": "Bagus sekali! Mohon periksa detail Anda sebelum konfirmasi.",
+    "confirmPasswordSuccess": "Sandi konfirmasi berhasil.",
+    "passwordCreatedSuccess": "Sandi berhasil dibuat.",
+    "allDataFilled": "Data sudah terisi semuanya.",
+    "proceedToConfirmation": "Akan lanjut untuk konfirmasi data.",
+    "creatingUserId": "Pembuatan user ID, tunggu sebentar...",
+    "registeringUser": "Mendaftarkan pengguna baru:",
+    "registrationSuccessWithName": "Pendaftaran untuk {username} berhasil!",
+    "alreadyHaveAccount": "Sudah punya akun?",
+    "loginHere": "Masuk di sini",
+    "passwordValidationFailed": "Kata sandi tidak memenuhi semua kriteria validasi.",
+    "usernameExists": "Username ini sudah digunakan. Silakan coba yang lain.",
+    "emailExists": "Email ini sudah terdaftar. Silakan gunakan email lain."
+  },
+  "registrationSummary": {
+    "title": "Konfirmasi Data Anda",
+    "description": "Pastikan data yang Anda masukkan sudah benar sebelum melanjutkan.",
+    "username": "Nama Pengguna",
+    "email": "Alamat Email",
+    "userId": "ID Pengguna",
+    "cancel": "Batal",
+    "confirm": "Kirim Pendaftaran"
+  },
+  "passwordValidator": {
+    "minLength": "Minimal 6 karakter"
+  },
+  "adminCreateCredentialsBox": {
+    "title": "Buat Kredensial Admin",
+    "description": "Silakan buat username dan password untuk akun admin baru.",
+    "usernameLabel": "Username",
+    "usernamePlaceholder": "Masukkan username",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Masukkan password",
+    "confirmPasswordLabel": "Konfirmasi Password",
+    "confirmPasswordPlaceholder": "Konfirmasi password",
+    "createButton": "Buat Kredensial",
+        "adminCreatedSuccess": "Admin berhasil dibuat.",
+    "passwordMismatch": "Password dan konfirmasi password tidak cocok.",
+    "passwordInvalid": "Password tidak memenuhi kriteria validasi.",
+    "successMessage": "Kredensial admin berhasil dibuat!",
+    "auth/email-already-in-use": "Email ini sudah terdaftar. Gunakan email lain.",
+    "auth/invalid-email": "Format email tidak valid.",
+    "auth/weak-password": "Kata sandi terlalu lemah."
+  },
+  "validation": {
+    "adminIdFormat": "ID Admin harus diawali dengan 'f3' diikuti karakter (huruf/angka) dan diakhiri 'r'."
+  }
+}

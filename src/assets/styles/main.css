@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+/*
+ * main.css
+ *
+ * File ini berisi gaya global untuk aplikasi, mengimplementasikan prinsip-prinsip Material You.
+ * Ini mencakup definisi warna dinamis (mode terang dan gelap), tipografi, dan bentuk.
+ */
+
+
+
+/* Gaya Dasar */
+html {
+    background-color: var(--background); /* Memastikan background HTML berubah sesuai tema */
+    transition: background-color 0.3s ease;
+}
+
+body {
+    margin: 0;
+    font-family: "Google Sans Text", sans-serif; /* Gunakan Google Sans Text jika tersedia */
+    background-color: var(--background); /* Menggunakan variabel umum */
+    color: var(--text-primary); /* Menggunakan variabel umum */
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+a {
+    color: var(--primary); /* Menggunakan variabel umum */
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-container); /* Menggunakan variabel umum */
+}
+
+/* Contoh penggunaan sudut membulat (prominently rounded corners) */
+.card {
+    border-radius: 28px; /* Sudut membulat yang menonjol */
+    background-color: var(--surface); /* Menggunakan variabel umum */
+    color: var(--text-primary); /* Menggunakan variabel umum */
+    box-shadow:
+        0px 1px 3px 1px rgba(0, 0, 0, 0.15),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.3); /* Contoh elevasi */
+    padding: 16px;
+}
+
+/* Pastikan ikon menggunakan Material Symbols jika diimpor */
+.material-symbols-outlined {
+    font-family: "Material Symbols Outlined", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Ukuran ikon standar */
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+}
