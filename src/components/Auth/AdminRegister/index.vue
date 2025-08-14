@@ -7,21 +7,8 @@
       <h2>{{ $t("adminRegisterBox.title") }}</h2>
       <p>{{ $t("adminRegisterBox.description") }}</p>
       <div :class="$style.inputGroup">
-        <label for="adminId"
-          >{{ $t("adminRegisterBox.adminIdLabel") }}
-          <div :class="$style.helpTooltipContainer">
-            <span
-              class="material-symbols-outlined"
-              :class="$style.helpIcon"
-              @click="toggleAdminIdHelp"
-            >
-              help
-            </span>
-            <p v-if="showAdminIdHelp" :class="$style.helpMessage">
-              {{ $t("adminRegisterBox.adminIdHelpMessage") }}
-            </p>
-          </div>
-        </label>
+        <label for="adminId">{{ $t("adminRegisterBox.adminIdLabel") }}</label>
+        <HelpTooltip messageKey="adminRegisterBox.adminIdHelpMessage" />
         <AdminIdInput
           id="adminId"
           v-model="adminData.adminId"
@@ -71,12 +58,14 @@
 <script>
 import AdminIdInput from "@/components/Admin/AdminIdInput/index.vue";
 import AdminCreateCredentialsBox from "@/components/Admin/adminCreateCredentials/index.vue";
+import HelpTooltip from "@/components/HelpTooltip/index.vue";
 
 export default {
   name: "AdminRegister",
   components: {
     AdminIdInput,
     AdminCreateCredentialsBox,
+    HelpTooltip,
   },
   emits: ["close"],
   data() {
@@ -185,44 +174,28 @@ export default {
 .inputGroup {
   text-align: left;
   margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .inputGroup label {
-  display: flex;
-  align-items: center;
   margin-bottom: 8px;
   font-weight: 500;
   color: rgb(var(--v-theme-onBackground));
   font-size: 14px;
+  margin-right: 8px; /* Add some space between label and icon */
 }
 
-.helpIcon {
-  font-size: 16px;
-  margin-left: 8px;
-  cursor: pointer;
-  color: rgb(var(--v-theme-onBackground));
-  transition: color 0.2s;
-}
 
-.helpIcon:hover {
-  color: rgb(var(--v-theme-primary));
-}
 
-.helpMessage {
-  font-size: 12px;
-  color: rgb(var(--v-theme-test));
-  margin-top: 8px;
-  background-color: rgb(var(--v-theme-background));
-  padding: 8px;
-  border-radius: 8px;
-  border: 1px solid rgb(var(--v-theme-border));
-}
+
 
 .inputWrapper {
   display: flex;
   align-items: center;
   background-color: rgb(var(--v-theme-background));
-  border: 2px solid var(--border-color);
+  border: 2px solid rgb(var(--v-theme-onBackground));
   border-radius: 16px;
   transition: border-color 0.2s;
   padding: 0 16px;
@@ -235,7 +208,7 @@ export default {
 
 .inputWrapper .material-symbols-outlined {
   font-size: 20px;
-  color: rgb(var(--v-theme-on-surface-variant));
+  color: rgb(var(--v-theme-onBackground));
 }
 
 .inputWrapper input {
@@ -245,12 +218,12 @@ export default {
   border: none;
   background: transparent;
   font-size: 16px;
-  color: rgb(var(--v-theme-on-surface));
+  color: rgb(var(--v-theme-onBackground));
   outline: none;
 }
 
 .inputWrapper input::placeholder {
-  color: rgb(var(--v-theme-on-surface-variant));
+  color: rgb(var(--v-theme-onBackground));
   opacity: 0.7;
 }
 
@@ -274,7 +247,7 @@ export default {
 .mainRegisterButton {
   background-color: rgb(var(--v-theme-primary));
   color: #000000;
-  border: 1px solid rgb(var(--v-theme-border));
+  border: 1px solid rgb(var(--v-theme-primary));
 }
 
 .mainRegisterButton:hover {
@@ -293,8 +266,7 @@ export default {
   background: none;
   border: none;
   cursor: pointer;
-  color: rgb(var(--v-theme-on-surface-variant));
-  font-size: 24px;
+  color: rgb(var(--v-theme-primary));
   padding: 8px;
   border-radius: 50%;
   transition: background-color 0.2s;

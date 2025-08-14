@@ -289,7 +289,7 @@ const startRegistration = (agree) => {
 };
 
 const validateEmailInput = (input) => {
-  const emailRegex = /^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,6}$/;
+  const emailRegex = /^["\w.-]+@["\w.-]+\.[a-zA-Z]{2,6}$/;
   if (!emailRegex.test(input)) {
     addMessage(t("registerBox.invalidEmail"), "system");
     currentInput.value = "";
@@ -426,7 +426,7 @@ const performRegistrationAndRedirect = () => {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  background-color: rgba(var(--v-theme-scrim), 0.5); /* Semi-transparent black */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -436,21 +436,19 @@ const performRegistrationAndRedirect = () => {
 .card {
   width: 100%;
   max-width: 450px;
-  background-color: var(--background);
+  background-color: rgb(var(--v-theme-background));
   border-radius: 28px;
-  box-shadow:
-    0px 1px 3px 1px rgba(0, 0, 0, 0.15),
-    0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--v-shadow-2);
   overflow: hidden;
   color: var(--md-sys-color-on-surface, #1d1b20);
-  border: 1px solid var(--border-color);
   position: relative;
+  border: 1px solid rgb(var(--v-theme-border));
 }
 
 .card-header {
   padding: 24px;
   text-align: center;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid rgb(var(--v-theme-border));
 }
 
 .card-header h2 {
@@ -458,13 +456,13 @@ const performRegistrationAndRedirect = () => {
   font-size: 24px;
   font-weight: 700;
   margin: 0 0 8px 0;
-  color: var(--md-sys-color-on-surface, #1d1b20);
+  color: rgb(var(--v-theme-primary, #1d1b20));
 }
 
 .card-header p {
   margin: 0;
   font-size: 14px;
-  color: var(--md-sys-color-on-surface-variant, #49454f);
+  color: rgb(var(--v-theme-onBackground, #49454f));
 }
 
 .header-content {
@@ -497,8 +495,8 @@ const performRegistrationAndRedirect = () => {
 }
 
 .chat-bubble.system {
-  background-color: var(--button-cyan);
-  color: var(--teks-kirim);
+  background-color: rgb(var(--v-theme-primary));
+  color: rgb(var(--v-theme-onInverseSurface));
   align-self: flex-start;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -507,8 +505,8 @@ const performRegistrationAndRedirect = () => {
 }
 
 .chat-bubble.user {
-  background-color: var(--user-pesan);
-  color: var(--user-pesan-teks);
+  background-color: rgb(var(--v-theme-onBackground));
+  color: rgb(var(--v-theme-inverseOnSurface));
   align-self: flex-end;
   margin-left: auto;
   border-top-left-radius: 20px;
@@ -519,14 +517,14 @@ const performRegistrationAndRedirect = () => {
 
 .chat-input-area {
   padding-top: 16px;
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid rgb(var(--v-theme-outline));
 }
 
 .initial-question p {
   text-align: center;
   margin-bottom: 16px;
   font-size: 16px;
-  color: var(--md-sys-color-on-surface, #1d1b20);
+  color: rgb(var(--v-theme-onBackground, #1d1b20));
 }
 
 .button-group {
@@ -548,24 +546,24 @@ const performRegistrationAndRedirect = () => {
 }
 
 .btn-chat:not(.btn-cancel):not(.btn-send) {
-  background-color: var(--button-cyan);
-  color: var(--teks-kirim);
+  background-color: rgb(var(--v-theme-primary));
+  color: rgb(var(--v-theme-on-primary));
 }
 
 .btn-chat:not(.btn-cancel):not(.btn-send):hover {
-  background-color: black;
-  color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: rgb(var(--v-theme-on-primary));
+  color: rgb(var(--v-theme-primary));
+  box-shadow: var(--v-shadow-1);
 }
 
 .btn-chat.btn-cancel {
   background-color: var(--md-sys-color-surface-container-low, #f7f2fa);
-  color: var(--button-cyan);
-  border: 1px solid var(--border-color);
+  color: rgb(var(--v-theme-primary));
+  border: 1px solid rgb(var(--v-theme-outline));
 }
 
 .btn-chat.btn-cancel:hover {
-  background-color: var(--md-sys-color-error-container, #f9dedc);
+  background-color: rgb(var(--v-theme-surface, #f9dedc));
   color: var(--md-sys-color-on-error-container, #410e0b);
 }
 
@@ -576,7 +574,7 @@ const performRegistrationAndRedirect = () => {
 
 .input-field label {
   font-size: 14px;
-  color: var(--md-sys-color-on-surface-variant);
+  color: rgb(var(--v-theme-onBackground));
 }
 
 .common-input-style {
@@ -585,7 +583,7 @@ const performRegistrationAndRedirect = () => {
   padding: 0 16px;
   border: none;
   background-color: transparent;
-  color: var(--md-sys-color-on-surface);
+  color: rgb(var(--v-theme-onBackground));
   font-size: 16px;
   transition:
     border-color 0.3s,
@@ -597,7 +595,7 @@ const performRegistrationAndRedirect = () => {
 }
 
 .common-input-style::placeholder {
-  color: var(--md-sys-color-on-surface-variant);
+  color: rgb(var(--v-theme-onBackground));
   opacity: 0.7;
 }
 
@@ -605,10 +603,10 @@ const performRegistrationAndRedirect = () => {
   display: flex;
   align-items: center;
   width: 100%;
-  border: 1px solid var(--border-color);
+  border: 1px solid rgb(var(--v-theme-border));
   border-radius: 20px;
-  background-color: var(--md-sys-color-surface-container-lowest);
-  color: var(--md-sys-color-on-surface);
+  background-color: rgb(var(--v-theme-background));
+  color: rgb(var(--v-theme-primary));
   font-size: 16px;
   transition:
     border-color 0.3s,
@@ -619,13 +617,13 @@ const performRegistrationAndRedirect = () => {
 }
 
 .password-input-wrapper:focus-within {
-  border-color: var(--border-color);
-  box-shadow: 0 0 0 4px var(--button-cyan);
+  border-color: rgb(var(--v-theme-primary));
+  box-shadow: 0 0 0 4px rgb(var(--v-theme-primary));
 }
 
 .btn-chat.btn-send {
-  background-color: var(--button-cyan);
-  color: var(--teks-kirim);
+  background-color: rgb(var(--v-theme-primary));
+  color: rgb(var(--v-theme-on-primary));
   padding: 12px 16px;
   border-radius: 20px; /* Mengubah border-radius menjadi 20px */
   min-height: 48px;
@@ -633,8 +631,8 @@ const performRegistrationAndRedirect = () => {
 }
 
 .btn-chat.btn-send:hover {
-  background-color: var(--md-sys-color-primary-dark, #4f378b);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: rgb(var(--v-theme-primary));
+  box-shadow: var(--v-shadow-1);
 }
 
 .final-message {
@@ -644,14 +642,14 @@ const performRegistrationAndRedirect = () => {
   padding: 18px;
   background-color: var(--md-sys-color-surface-container-low, #f7f2fa);
   border-radius: 20px;
-  border: 10px solid cyan;
+  border: 10px solid rgb(var(--v-theme-primary));
 }
 
 .card-footer {
   padding: 20px;
   text-align: center;
   background-color: var(--md-sys-color-surface-container, #f3edf7);
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid rgb(var(--v-theme-outline));
 }
 
 .card-footer p {
@@ -660,7 +658,7 @@ const performRegistrationAndRedirect = () => {
 }
 
 .card-footer a {
-  color: var(--button-cyan);
+  color: rgb(var(--v-theme-primary));
   text-decoration: none;
   font-weight: 600;
 }
@@ -676,7 +674,7 @@ const performRegistrationAndRedirect = () => {
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--md-sys-color-on-surface-variant, #49454f);
+  color: rgb(var(--v-theme-primary, #49454f));
   font-size: 24px;
   padding: 8px;
   border-radius: 50%;

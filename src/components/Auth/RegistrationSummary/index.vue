@@ -74,7 +74,7 @@ const emit = defineEmits(["confirm", "cancel"]);
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(var(--v-theme-scrim), 0.65);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,11 +83,11 @@ const emit = defineEmits(["confirm", "cancel"]);
 }
 
 .summaryBox {
-  background: var(--surface);
+  background: rgb(var(--v-theme-background));
   padding: 32px;
   border-radius: 28px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  border: 1px solid var(--border-color);
+  border: 1px solid rgb(var(--v-theme-border));
   width: 100%;
   max-width: 400px;
   display: flex;
@@ -98,14 +98,14 @@ const emit = defineEmits(["confirm", "cancel"]);
 .title {
   font-size: 24px;
   font-weight: 700;
-  color: var(--text-primary);
+  color: rgb(var(--v-theme-onBackground));
   text-align: center;
   margin: 0;
 }
 
 .description {
   font-size: 14px;
-  color: var(--text-secondary);
+  color: rgb(var(--v-theme-onBackground));
   text-align: center;
   margin: 0;
 }
@@ -114,8 +114,8 @@ const emit = defineEmits(["confirm", "cancel"]);
   display: flex;
   flex-direction: column;
   gap: 16px;
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
+  border-top: 1px solid rgb(var(--v-theme-border));
+  border-bottom: 1px solid rgb(var(--v-theme-border));
   padding: 24px 0;
 }
 
@@ -127,13 +127,13 @@ const emit = defineEmits(["confirm", "cancel"]);
 
 .dataLabel {
   font-weight: 500;
-  color: var(--text-secondary);
+  color: rgb(var(--v-theme-onBackground));
   font-size: 16px;
 }
 
 .dataValue {
   font-weight: 600;
-  color: var(--text-primary);
+  color: rgb(var(--v-theme-onBackground));
   font-size: 16px;
 }
 
@@ -157,22 +157,22 @@ const emit = defineEmits(["confirm", "cancel"]);
 }
 
 .cancelButton {
-  background-color: var(--surface);
-  color: var(--primary);
-  border: 1px solid var(--border-color);
+  background-color: rgb(var(--v-theme-background));
+  color: rgb(var(--v-theme-primary));
+  border: 1px solid rgb(var(--v-theme-primary));
 }
 
 .cancelButton:hover {
-  background-color: var(--background);
+  background-color: rgb(var(--v-theme-background));
 }
 
 .confirmButton {
-  background-color: var(--button-cyan);
-  color: var(--teks-kirim);
+  background-color: rgb(var(--v-theme-primary));
+  color: rgb(var(--v-theme-onInverseSurface));
 }
 
 .confirmButton:hover {
-  background-color: color-mix(in srgb, var(--primary) 90%, black);
+  background-color: color-mix(in srgb, rgb(var(--v-theme-primary)) 90%, rgb(var(--v-theme-scrim)));
   box-shadow: 0 4px 8px rgba(0, 98, 230, 0.2);
 }
 </style>

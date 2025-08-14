@@ -79,21 +79,21 @@ export default {
 .inputWrapper {
   display: flex;
   align-items: center;
-  background-color: var(--background);
-  border: 2px solid var(--border-color);
+  background-color: rgb(var(--v-theme-background));
+  border: 2px solid rgb(var(--v-theme-onBackground));
   border-radius: 16px;
   transition: border-color 0.2s;
   padding: 0 16px;
 }
 
 .inputWrapper:focus-within {
-  border-color: var(--primary);
+  border-color: rgb(var(--v-theme-primary));
   box-shadow: 0 0 0 2px rgba(0, 98, 230, 0.2);
 }
 
 .inputWrapper .material-symbols-outlined {
   font-size: 20px;
-  color: var(--text-secondary);
+  color: rgb(var(--v-theme-onBackground));
 }
 
 .inputWrapper input {
@@ -103,17 +103,17 @@ export default {
   border: none;
   background: transparent;
   font-size: 16px;
-  color: var(--text-primary);
+  color: rgb(var(--v-theme-onBackground));
   outline: none;
 }
 
 .inputWrapper input::placeholder {
-  color: var(--text-secondary);
+  color: rgb(var(--v-theme-onBackground));
   opacity: 0.7;
 }
 
 .errorMessage {
-  color: var(--md-sys-color-error);
+  color: rgb(var(--v-theme-error));
   font-size: 12px;
   margin-top: 4px;
   text-align: left;

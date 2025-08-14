@@ -65,7 +65,7 @@ defineExpose({
   display: flex;
   align-items: center;
   font-size: 14px;
-  color: var(--text-secondary);
+  color: rgb(var(--v-theme-onBackground));
   transition: color 0.3s ease;
 }
 
