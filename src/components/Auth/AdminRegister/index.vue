@@ -91,11 +91,23 @@ export default {
         import.meta.env.VITE_OWNER_ADMIN_ID,
       );
       console.log(
-        "Debug: Comparison result =",
+        "Debug: VITE_OWNER_EMAIL =",
+        import.meta.env.VITE_OWNER_EMAIL,
+      );
+      console.log(
+        "Debug: Admin ID Comparison result =",
         this.adminData.adminId === import.meta.env.VITE_OWNER_ADMIN_ID,
       );
-      // Periksa apakah Admin ID adalah owner ID terlebih dahulu
-      if (this.adminData.adminId === import.meta.env.VITE_OWNER_ADMIN_ID) {
+      console.log(
+        "Debug: Admin Email Comparison result =",
+        this.adminData.email === import.meta.env.VITE_OWNER_EMAIL,
+      );
+
+      // Periksa apakah Admin ID dan Email adalah owner ID dan Email terlebih dahulu
+      if (
+        this.adminData.adminId === import.meta.env.VITE_OWNER_ADMIN_ID &&
+        this.adminData.email.toLowerCase() === import.meta.env.VITE_OWNER_EMAIL.toLowerCase()
+      ) {
         this.isOwnerId = true;
         console.log(this.$t("adminRegisterBox.ownerIdDetected"));
         console.log("Admin ID:", this.adminData.adminId);
